@@ -5,7 +5,7 @@ import torch
 import os
 
 def main():
-    st.title("Streamlit Image Upload and Display")
+    st.title("도장 결함 검출 프로그램")
     st.write(os.getcwd())
     uploaded_file = st.file_uploader("Choose an image...", type="png")
 
