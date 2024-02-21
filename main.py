@@ -16,10 +16,17 @@ def main():
         st.image(image, caption="Uploaded Image.", use_column_width=True)
         exec(open('test.py').read())
         
+        # model = torch.hub.load('./yolov5', 'custom',  'yolov5s.pt', source='local')  # yolov5n - yolov5x6 or custom
+        # im = './test.png'  # file, Path, PIL.Image, OpenCV, nparray, list
+        # results = model(im)  # inference
+        # results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
+        # st.write("This is a simple Streamlit app.")
+
         model = torch.hub.load('./yolov5', 'custom',  'yolov5s.pt', source='local')  # yolov5n - yolov5x6 or custom
-        im = './test.png'  # file, Path, PIL.Image, OpenCV, nparray, list
-        results = model(im)  # inference
-        results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
+        results = model(image)  # inference
+        st.image(results, caption="Uploaded Image.", use_column_width=True)
+
+        # st.write(results)
 
 
 if __name__ == "__main__":
