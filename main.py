@@ -22,7 +22,7 @@ def main():
         # results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
         # st.write("This is a simple Streamlit app.")
 
-        model = torch.hub.load('./yolov5-master', 'custom',  'yolov5s.pt', source='local')  # yolov5n - yolov5x6 or custom
+        model = torch.hub.load('./yolov5-master', 'custom',  'best.pt', source='local')  # yolov5n - yolov5x6 or custom
         # results = model(image)  # inference
         # st.image(results, caption="Uploaded Image.", use_column_width=True)
 
