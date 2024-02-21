@@ -24,7 +24,7 @@ def main():
         # st.write("This is a simple Streamlit app.")
 
         # model = torch.hub.load('./yolov5-master', 'custom',  'best.pt')  # yolov5n - yolov5x6 or custom
-        model = torch.hub.load('./yolov5-master',  './yolov5-master/best.pt')  # yolov5n - yolov5x6 or custom
+        model = torch.hub.load('/yolov5-master', 'custom', path='best.pt')
         # model = torch.hub.load('./yolov5-master', 'custom',  'best.pt', source='local')  # yolov5n - yolov5x6 or custom
         # model = torch.hub.load('./yolov5-master', 'best.pt', force_reload=True, trust_repo=True)  # or yolov5n - yolov5x6 or custom
         im = 'https://ultralytics.com/images/zidane.jpg'  # file, Path, PIL.Image, OpenCV, nparray, list
