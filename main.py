@@ -24,3 +24,5 @@ plt.plot(x, y)
 plt.title('Simple Line Plot')
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
+
+print('hihihi')
