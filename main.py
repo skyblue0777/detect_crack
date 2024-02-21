@@ -1,5 +1,7 @@
 import streamlit as st
 from PIL import Image
+# YOLOv5 PyTorch HUB Inference (DetectionModels only)
+import torch
 
 def main():
     st.title("Streamlit Image Upload and Display")
@@ -13,6 +15,12 @@ def main():
         # 이미지를 화면에 출력
         st.image(image, caption="Uploaded Image.", use_column_width=True)
         exec(open('test.py').read())
+        
+        model = torch.hub.load('./yolov5', 'custom',  'yolov5s.pt', source='local')  # yolov5n - yolov5x6 or custom
+        im = './test.png'  # file, Path, PIL.Image, OpenCV, nparray, list
+        results = model(im)  # inference
+        results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
+
 
 if __name__ == "__main__":
     main()
