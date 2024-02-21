@@ -6,7 +6,7 @@ pathlib
 yolov5
 torch
 # yaml
-glob
+# glob
 IPython
 
 # YOLOv5 requirements
