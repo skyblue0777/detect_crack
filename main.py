@@ -1,28 +1,17 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
-import sklearn
-df = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+from PIL import Image
 
-st.line_chart(df)
+def main():
+    st.title("Streamlit Image Upload and Display")
 
+    uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
-st.text('hiaaaaa')
-st.text('hiaaaaa')
-st.text('hiaaaaa')
+    if uploaded_file is not None:
+        # 업로드한 파일을 이미지로 변환
+        image = Image.open(uploaded_file)
 
-import matplotlib.pyplot as plt
+        # 이미지를 화면에 출력
+        st.image(image, caption="Uploaded Image.", use_column_width=True)
 
-# 데이터 생성
-x = [1, 2, 3, 4, 5]
-y = [2, 4, 6, 8, 10]
-
-# 선 그래프 그리기
-plt.plot(x, y)
-
-# 그래프에 제목과 레이블 추가
-plt.title('Simple Line Plot')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-
-print('hihihi')
+if __name__ == "__main__":
+    main()
