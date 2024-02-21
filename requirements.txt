@@ -5,7 +5,7 @@ matplotlib
 pathlib
 yolov5
 torch
-yaml
+# yaml
 glob
 IPython
 
