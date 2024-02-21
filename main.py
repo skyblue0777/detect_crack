@@ -2,10 +2,11 @@ import streamlit as st
 from PIL import Image
 # YOLOv5 PyTorch HUB Inference (DetectionModels only)
 import torch
+import os
 
 def main():
     st.title("Streamlit Image Upload and Display")
-
+    st.write(os.getcwd())
     uploaded_file = st.file_uploader("Choose an image...", type="png")
 
     if uploaded_file is not None:
