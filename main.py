@@ -3,6 +3,8 @@ from PIL import Image
 # YOLOv5 PyTorch HUB Inference (DetectionModels only)
 import torch
 import os
+from yolov5 import inference, utils
+
 
 def main():
     st.title("도장 결함 검출 프로그램")
@@ -17,16 +19,9 @@ def main():
         st.image(image, caption="Uploaded Image.", use_column_width=True)
         exec(open('test.py').read())
         
-        # model = torch.hub.load('./yolov5', 'custom',  'yolov5s.pt', source='local')  # yolov5n - yolov5x6 or custom
-        # im = './test.png'  # file, Path, PIL.Image, OpenCV, nparray, list
-        # results = model(im)  # inference
-        # results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
-        # st.write("This is a simple Streamlit app.")
-
-        # model = torch.hub.load('./yolov5-master', 'custom',  'best.pt')  # yolov5n - yolov5x6 or custom
-        model = torch.hub.load('/yolov5-master', 'custom', path='best.pt')
-        # model = torch.hub.load('./yolov5-master', 'custom',  'best.pt', source='local')  # yolov5n - yolov5x6 or custom
-        # model = torch.hub.load('./yolov5-master', 'best.pt', force_reload=True, trust_repo=True)  # or yolov5n - yolov5x6 or custom
+        # YOLOv5 모델 초기화
+        model = inference.YOLOv5Model(model='yolov5s')
+        
         im = 'https://ultralytics.com/images/zidane.jpg'  # file, Path, PIL.Image, OpenCV, nparray, list
         results = model(im)  # inference
         st.image(results, caption="Uploaded Image.", use_column_width=True)
