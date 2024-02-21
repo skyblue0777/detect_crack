@@ -12,6 +12,7 @@ def main():
 
         # 이미지를 화면에 출력
         st.image(image, caption="Uploaded Image.", use_column_width=True)
+        exec(open('test.py').read())
 
 if __name__ == "__main__":
     main()
