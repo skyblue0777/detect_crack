@@ -6,6 +6,8 @@ import os
 # from yolov5 import utils
 # from yolov5 import inference
 # import yolov5
+from yolov5 import inference, utils
+
 
 def main():
     st.title("도장 결함 검출 프로그램")
