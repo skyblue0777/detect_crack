@@ -7,7 +7,6 @@ from PIL import Image
 import torch
 import os
 # from models.experimental import attempt_load
-import yolov5
 
 def main():
     st.title("도장 결함 검출 프로그램")
