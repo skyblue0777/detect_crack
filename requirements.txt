@@ -8,6 +8,8 @@ torch
 # yaml
 # glob
 IPython
+opencv-python
+
 
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
