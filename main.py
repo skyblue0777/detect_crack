@@ -1,5 +1,4 @@
 import streamlit as st
-import opencv
 import sys
 st.write('파이썬 버전 : ', sys.version)
 from PIL import Image
