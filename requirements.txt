@@ -8,7 +8,7 @@ torch
 # yaml
 # glob
 IPython
-opencv-python
+# opencv-python
 python3-opencv
 
 
