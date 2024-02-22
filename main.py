@@ -8,7 +8,7 @@ import os
 # from yolov5 import utils
 # from yolov5 import inference
 # import yolov5
-from yolov5 import inference, utils
+# from yolov5 import inference, utils
 
 
 def main():
