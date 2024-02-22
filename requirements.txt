@@ -9,6 +9,8 @@ torch
 # glob
 IPython
 opencv-python
+python3-opencv
+
 
 
 # YOLOv5 requirements
