@@ -22,7 +22,7 @@ def main():
         exec(open('test.py').read())
         
         # YOLOv5 모델 초기화
-        model = torch.load('/yolov5-master/best.pt', map_location=torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+        model = torch.load('./yolov5-master/best.pt', map_location=torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
 
         
         im = 'https://ultralytics.com/images/zidane.jpg'  # file, Path, PIL.Image, OpenCV, nparray, list
