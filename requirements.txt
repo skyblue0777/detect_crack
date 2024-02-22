@@ -9,6 +9,8 @@ torch
 # glob
 IPython
 opencv-python
+opencv-python-headless
+
 # python3-opencv
 
 
