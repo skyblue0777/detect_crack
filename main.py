@@ -5,7 +5,7 @@ import torch
 import os
 # from yolov5 import utils
 # from yolov5 import inference
-import yolov5
+# import yolov5
 
 def main():
     st.title("도장 결함 검출 프로그램")
