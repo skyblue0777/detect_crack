@@ -6,10 +6,7 @@ from PIL import Image
 # YOLOv5 PyTorch HUB Inference (DetectionModels only)
 import torch
 import os
-# from yolov5 import utils
-# from yolov5 import inference
-# import yolov5
-# from yolov5 import inference, utils
+from yolov5.models.experimental import attempt_load
 
 
 def main():
