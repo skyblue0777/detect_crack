@@ -1,6 +1,8 @@
 import streamlit as st
 import sys
 st.write('파이썬 버전 : ', sys.version)
+from yolov5.models.experimental import attempt_load
+
 from PIL import Image
 # YOLOv5 PyTorch HUB Inference (DetectionModels only)
 import torch
